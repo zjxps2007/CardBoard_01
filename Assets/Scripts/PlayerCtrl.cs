@@ -12,8 +12,6 @@ public class PlayerCtrl : MonoBehaviour
     public Text TextUI;
 
     private bool isTriggered = false;
-    public GameObject Sphere;
-    public Texture TextureImamge;
     
     // Start is called before the first frame update
     void Start()
@@ -46,25 +44,26 @@ public class PlayerCtrl : MonoBehaviour
                  isTriggered = false;
                 }
             }
-            else if (hit.collider.CompareTag("Object"))
+            else if (hit.collider.CompareTag("Object") || hit.collider.CompareTag("Car") || hit.collider.CompareTag("Tree") || hit.collider.CompareTag("House"))
             {
-                GaugeTimer += 0.33f * Time.deltaTime;
-                if (GaugeTimer >= 1.0f || isTriggered)
-                {
-                    TextUI.text = hit.collider.GetComponent<ObjectText>().text;
-                    GaugeTimer = 0.0f;
-                    isTriggered = false;
-                }
-            }
-            else if (hit.collider.CompareTag("Object"))
-            {
-                
+                TextHit(hit.collider);
             }
             else
             {
                 TextUI.text = "";
                 GaugeTimer = 0.0f;
             }
+        }
+    }
+    
+    void TextHit(Collider collider)
+    {
+        GaugeTimer += 0.33f * Time.deltaTime;
+        if (GaugeTimer >= 1.0f || isTriggered)
+        {
+            TextUI.text = collider.GetComponent<ObjectText>().text;
+            GaugeTimer = 0.0f;
+            isTriggered = false;
         }
     }
 }

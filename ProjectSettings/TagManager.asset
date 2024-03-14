@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Box
   - Object
+  - Car
+  - Tree
+  - House
   layers:
   - Default
   - TransparentFX
