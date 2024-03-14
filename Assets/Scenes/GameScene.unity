@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12729394, g: 0.1341429, b: 0.121147014, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: ec95354f4904b774fb5258c59097ef52, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -133,6 +133,10 @@ PrefabInstance:
     - target: {fileID: 100022, guid: 2c972239f8d58d944a0e1cff0da4ac22, type: 3}
       propertyPath: m_Name
       value: Char_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100022, guid: 2c972239f8d58d944a0e1cff0da4ac22, type: 3}
+      propertyPath: m_TagString
+      value: Object
       objectReference: {fileID: 0}
     - target: {fileID: 400022, guid: 2c972239f8d58d944a0e1cff0da4ac22, type: 3}
       propertyPath: m_RootOrder
@@ -385,6 +389,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Char_2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3976769328328457930, guid: 901e47ebbd9e74f2ba68dae2191b431c, type: 3}
+      propertyPath: m_TagString
+      value: Object
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 901e47ebbd9e74f2ba68dae2191b431c, type: 3}
 --- !u!1 &1130420049 stripped
@@ -553,6 +561,10 @@ PrefabInstance:
     - target: {fileID: 3976769328328457930, guid: 901e47ebbd9e74f2ba68dae2191b431c, type: 3}
       propertyPath: m_Name
       value: Char_2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3976769328328457930, guid: 901e47ebbd9e74f2ba68dae2191b431c, type: 3}
+      propertyPath: m_TagString
+      value: Object
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 901e47ebbd9e74f2ba68dae2191b431c, type: 3}
@@ -817,6 +829,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2338745016346928506, guid: 26958a16e30d242dabc8476fcf15273e, type: 3}
+      propertyPath: TextUI
+      value: 
+      objectReference: {fileID: 1155356812}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26958a16e30d242dabc8476fcf15273e, type: 3}
 --- !u!224 &1816262110 stripped

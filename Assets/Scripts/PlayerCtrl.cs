@@ -38,27 +38,32 @@ public class PlayerCtrl : MonoBehaviour
                 GaugeTimer += 0.33f * Time.deltaTime;
                 if (GaugeTimer >= 1.0f || isTriggered)
                 {
-                 // hit.transform.gameObject.SetActive(false);
-                 Sphere.GetComponent<Renderer>().material.SetTexture("_MainTex", TextureImamge);
+                    hit.transform.gameObject.SetActive(false);
+                    
+                    Application.LoadLevel(1);
+                    
                  GaugeTimer = 0.0f;
                  isTriggered = false;
                 }
             }
-            else if (hit.collider.CompareTag("Button"))
+            else if (hit.collider.CompareTag("Object"))
             {
                 GaugeTimer += 0.33f * Time.deltaTime;
                 if (GaugeTimer >= 1.0f || isTriggered)
                 {
-                    Debug.Log("hit");
-                    hit.transform.GetComponent<Button>().onClick.Invoke();
+                    TextUI.text = hit.collider.GetComponent<ObjectText>().text;
                     GaugeTimer = 0.0f;
                     isTriggered = false;
                 }
             }
+            else if (hit.collider.CompareTag("Object"))
+            {
+                
+            }
             else
             {
+                TextUI.text = "";
                 GaugeTimer = 0.0f;
-                isTriggered = false;
             }
         }
     }
