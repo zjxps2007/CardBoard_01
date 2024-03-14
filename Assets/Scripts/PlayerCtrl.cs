@@ -9,6 +9,8 @@ public class PlayerCtrl : MonoBehaviour
     private Vector3 ScreenCenter;
     private float GaugeTimer;
 
+    public Text TextUI;
+
     private bool isTriggered = false;
     public GameObject Sphere;
     public Texture TextureImamge;
