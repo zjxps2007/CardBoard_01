@@ -9,9 +9,11 @@ public class PlayerCtrl : MonoBehaviour
     private Vector3 ScreenCenter;
     private float GaugeTimer;
 
-    public Text TextUI;
+    private AudioSource audioSource;
 
+    public Text TextUI;
     private bool isTriggered = false;
+    
     
     // Start is called before the first frame update
     void Start()
@@ -62,8 +64,11 @@ public class PlayerCtrl : MonoBehaviour
         if (GaugeTimer >= 1.0f || isTriggered)
         {
             TextUI.text = collider.GetComponent<ObjectText>().text;
+            audioSource = collider.GetComponent<AudioSource>();
+            audioSource.Play();
             GaugeTimer = 0.0f;
             isTriggered = false;
         }
     }
+    
 }
